@@ -1,1 +1,1 @@
-export { default as Countries } from "./countries/countries";
+export { default as Loader } from './loader/loader'
