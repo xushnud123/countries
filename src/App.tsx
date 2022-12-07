@@ -1,5 +1,5 @@
 import "./App.css";
-import { Landing } from "pages";
+import { Main } from "pages";
 import React, { useEffect, useState } from "react";
 import { Loader } from "components";
 
@@ -11,13 +11,12 @@ function App() {
   });
   return (
     <div className='App'>
-      {loader ? (
+      {/* {loader ? (
         <Loader />
-      ) : (
-        <React.Fragment>
-          <Landing.Landing />
-        </React.Fragment>
-      )}
+      ) : ( */}
+      <React.Fragment>
+        <Main />
+      </React.Fragment>
     </div>
   );
 }

@@ -1,2 +1,1 @@
-export { default as Countries } from "./landing/countries/countries";
-export * as Landing from './landing'
+export { default as Main } from "./landing/main/main";
