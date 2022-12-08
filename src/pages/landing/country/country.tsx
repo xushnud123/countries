@@ -1,4 +1,4 @@
-import { useCountry } from "modules/country/useCountry";
+import { useCountry } from "modules/country/hooks/useCountry";
 import { FC } from "react";
 import { useParams } from "react-router-dom";
 

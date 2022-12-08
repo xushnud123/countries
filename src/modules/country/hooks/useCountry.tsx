@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Country } from "./mappers";
+import { Country } from "../mappers";
 import { useQuery, useQueryClient } from "react-query";
-import type * as Types from "./types";
+import type * as Types from "../types";
 
 interface CountryData {
   nameID: string;

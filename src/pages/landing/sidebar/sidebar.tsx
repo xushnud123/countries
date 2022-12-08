@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-interface SideBarProps {
+import cls from "./sidebar.module.scss";
 
-}
+interface SideBarProps {}
 
-const SideBar:FC<SideBarProps> = () => {
- return ( <div>Hello</div> );
-}
+const SideBar: FC<SideBarProps> = () => {
+  return <div className={cls.wrapper}>Hello</div>;
+};
 
 export default SideBar;

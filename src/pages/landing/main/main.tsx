@@ -3,13 +3,14 @@ import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 import Countries from "../countries/countries";
 import Country from "../country/country";
+import SideBar from "../sidebar/sidebar";
 
 interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
   return (
     <Main
-      cardLeft={<h1>Hello World</h1>}
+      cardLeft={<SideBar/>}
       cardRight={
         <Routes>
           <Route path='/' element={<Countries />} />

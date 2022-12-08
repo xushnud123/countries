@@ -1,30 +1,20 @@
 .wrapper {
   width: 100%;
   padding: 20px 30px;
-  background: #f8f8f8;
+  background: #f5f6ff;
   min-height: 100vh;
+  border-radius: 25px;
   .allCard {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    // -webkit-column-count: 4;
+    // -moz-column-count: 4;
+    // column-count: 4;
+    // -webkit-column-width: 25%;
+    // -moz-column-width: 25%;
+    // column-width: 25%;
     box-sizing: border-box;
-    .cards {
-      width: 100%;
-      height: 180px;
-      .card {
-        width: 100%;
-        max-height: 150px;
-        height: auto;
-        img {
-          width: 100%;
-          object-fit: contain;
-        }
-      }
-      .title {
-        text-align: center;
-        margin-top: 10px;
-      }
-    }
   }
 }

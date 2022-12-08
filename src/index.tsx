@@ -5,6 +5,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "react-loading-skeleton/dist/skeleton.css";
 import { BrowserRouter } from "react-router-dom";
+import "assets/styles/main.scss";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
