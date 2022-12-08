@@ -4,6 +4,11 @@
   background: #f5f6ff;
   min-height: 100vh;
   border-radius: 25px;
+  background-image: url("../../../assets/images/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   .allCard {
     width: 100%;
     display: grid;
