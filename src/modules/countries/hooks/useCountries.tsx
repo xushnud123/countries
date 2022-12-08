@@ -4,8 +4,8 @@ import { useQuery } from "react-query";
 import { Countries } from "../mappers";
 import type * as Types from "../types";
 
-const useRestApi = () => {
-  const fetchRestApi = async () => {
+const useCountries = () => {
+  const fetchCountries = async () => {
     const data = await axios
       .get("https://restcountries.com/v3.1/all")
       .then((res) => res.data);
@@ -16,10 +16,10 @@ const useRestApi = () => {
   };
   return useQuery<any, any, Types.CountriesData.Countries[]>(
     ["countries", "list"],
-    fetchRestApi,
+    fetchCountries,
     {
     }
   );
 };
 
-export default useRestApi;
+export default useCountries;
