@@ -41,6 +41,7 @@ export const useCountry = ({ nameID: name }: CountryData) => {
         return () => fetchCountry(name);
       }
     },
+    cacheTime: 3000,
   });
 
   if (isError) {

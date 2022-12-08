@@ -17,7 +17,8 @@ const useRestApi = () => {
   return useQuery<any, any, Types.CountriesData.Countries[]>(
     ["countries", "list"],
     fetchRestApi,
-    {}
+    {
+    }
   );
 };
 

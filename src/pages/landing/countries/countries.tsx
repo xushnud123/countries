@@ -1,19 +1,19 @@
-import { FC } from "react";
+import { FC, useContext, useEffect } from "react";
 import { CardSkeleton } from "components";
 import Card from "./card/card";
 import { temporaryData } from "constant/countries";
-import useRestApi from "modules/countries/hooks/useCountries";
+import GlobalContext from "context/context";
 import type * as Types from "modules/countries/types";
-
 
 import cls from "./countries.module.scss";
 
 interface CountriesProps {}
 
 const Countries: FC<CountriesProps> = () => {
-  const { data, isLoading } = useRestApi();
+  const { state, setState } = useContext(GlobalContext);
 
-  if (isLoading) {
+
+  if (state.isLoading) {
     return (
       <div className={cls.wrapper}>
         <div className={cls.allCard}>
@@ -28,11 +28,12 @@ const Countries: FC<CountriesProps> = () => {
   return (
     <div className={cls.wrapper}>
       <div className={cls.allCard}>
-        {data?.map((item: Types.CountriesData.Countries, index: number) => (
+        {state.data?.map((item: Types.CountriesData.Countries, index: number) => (
           <Card
             official={item.name.official}
             svg={item.flags.svg}
             name={item.altSpellings}
+            key={index}
           />
         ))}
       </div>
