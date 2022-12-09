@@ -1,17 +1,17 @@
 import { FC } from "react";
 import { CardSkeleton } from "components";
 import Card from "./card/card";
-import useCountries from "modules/countries/hooks/useCountries";
 import { temporaryData } from "constant/countries";
 import type * as Types from "modules/countries/types";
 
 import cls from "./countries.module.scss";
 
-interface CountriesProps {}
+interface CountriesProps {
+  data: Types.CountriesData.Countries[] | undefined;
+  isLoading: boolean;
+}
 
-const Countries: FC<CountriesProps> = () => {
-  const { data, isLoading } = useCountries();
-
+const Countries: FC<CountriesProps> = ({ data, isLoading }) => {
   if (isLoading) {
     return (
       <div className={cls.wrapper}>
@@ -27,16 +27,14 @@ const Countries: FC<CountriesProps> = () => {
   return (
     <div className={cls.wrapper}>
       <div className={cls.allCard}>
-        {data?.map(
-          (item: Types.CountriesData.Countries, index: number) => (
-            <Card
-              official={item.name.official}
-              svg={item.flags.svg}
-              name={item.altSpellings}
-              key={index}
-            />
-          )
-        )}
+        {data?.map((item: Types.CountriesData.Countries, index: number) => (
+          <Card
+            official={item.name.official}
+            svg={item.flags.svg}
+            name={item.altSpellings}
+            key={index}
+          />
+        ))}
       </div>
     </div>
   );
