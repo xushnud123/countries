@@ -1,19 +1,18 @@
-import { FC, useContext, useEffect } from "react";
+import { FC } from "react";
 import { CardSkeleton } from "components";
 import Card from "./card/card";
 import { temporaryData } from "constant/countries";
-import GlobalContext from "context/context";
 import type * as Types from "modules/countries/types";
 
 import cls from "./countries.module.scss";
 
-interface CountriesProps {}
+interface CountriesProps {
+  data: Types.CountriesData.Countries[] | undefined;
+  isLoading: boolean;
+}
 
-const Countries: FC<CountriesProps> = () => {
-  const { state, setState } = useContext(GlobalContext);
-
-
-  if (state.isLoading) {
+const Countries: FC<CountriesProps> = ({ data, isLoading }) => {
+  if (isLoading) {
     return (
       <div className={cls.wrapper}>
         <div className={cls.allCard}>
@@ -28,7 +27,7 @@ const Countries: FC<CountriesProps> = () => {
   return (
     <div className={cls.wrapper}>
       <div className={cls.allCard}>
-        {state.data?.map((item: Types.CountriesData.Countries, index: number) => (
+        {data?.map((item: Types.CountriesData.Countries, index: number) => (
           <Card
             official={item.name.official}
             svg={item.flags.svg}

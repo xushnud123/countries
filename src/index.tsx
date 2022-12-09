@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
-import "react-loading-skeleton/dist/skeleton.css";
 import { BrowserRouter } from "react-router-dom";
+import "react-loading-skeleton/dist/skeleton.css";
 import "assets/styles/main.scss";
-import { ContextProvider } from "context/context";
+import ContextProvider from "context/context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -24,8 +24,8 @@ root.render(
       <QueryClientProvider client={client}>
         <ContextProvider>
           <App />
+          <ReactQueryDevtools initialIsOpen={false} />
         </ContextProvider>
-        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>
