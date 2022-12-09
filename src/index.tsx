@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import "react-loading-skeleton/dist/skeleton.css";
 import "assets/styles/main.scss";
-import ContextProvider from "context/context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,10 +21,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={client}>
-        <ContextProvider>
-          <App />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </ContextProvider>
+        <App />
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>

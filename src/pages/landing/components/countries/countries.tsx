@@ -12,6 +12,7 @@ interface CountriesProps {
 }
 
 const Countries: FC<CountriesProps> = ({ data, isLoading }) => {
+  
   if (isLoading) {
     return (
       <div className={cls.wrapper}>

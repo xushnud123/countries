@@ -1,21 +1,19 @@
 import Main from "layout/main";
 import useCountries from "modules/countries/hooks/useCountries";
 import { useRegion } from "modules/region/hooks/useRegion";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Countries, Sidebar, Country } from "../components";
+import Filter from "../components/filter/filter";
 
 interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
-  const [state, setState] = useState("");
   const { data, isLoading } = useCountries();
-  const { data: region, isLoading: loading } = useRegion(state);
-
 
   return (
     <Main
-      cardLeft={<Sidebar setState={setState} />}
+      cardLeft={<Sidebar />}
       cardRight={
         <Routes>
           <Route
@@ -23,11 +21,12 @@ const Landing: FC<LandingProps> = () => {
             element={
               <Countries
                 //@ts-ignore
-                data={state ? region : data}
-                isLoading={state ? loading : isLoading}
+                data={data}
+                isLoading={isLoading}
               />
             }
           />
+          <Route path='/filter/:regionName' element={<Filter />} />
           <Route path='/:name' element={<Country />} />
         </Routes>
       }

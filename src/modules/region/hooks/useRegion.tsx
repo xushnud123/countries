@@ -1,14 +1,14 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export const useRegion = (name: string) => {
-  function fetchRegion(name: string) {
+export const useRegion = (regionName: string) => {
+  function fetchRegion(regionName: string) {
     return axios
-      .get(`https://restcountries.com/v3.1/region/${name}`)
+      .get(`https://restcountries.com/v3.1/region/${regionName}`)
       .then((res) => res.data);
   }
 
-  return useQuery(["region"], () => fetchRegion(name), {
-    enabled: false,
+  return useQuery(["region", regionName], () => fetchRegion(regionName), {
+    enabled: !!regionName,
   });
 };

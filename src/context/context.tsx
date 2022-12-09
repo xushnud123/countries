@@ -23,19 +23,17 @@ interface Props {
 
 const ContextProvider: React.FC<Props> = ({ children }) => {
   const { data, isLoading } = useCountries();
-  const [initialState, setInitialState] = useState<State>({
-    initialState: data,
-    isLoading: isLoading,
-  });
+    const [state, dispatch] = useReducer(reducer, {
+      initialState: data,
+      isLoading: isLoading,
+    });
 
   useEffect(() => {
-    setInitialState({
-      initialState: data,
-      isLoading,
-    });
+    // disptch(()=>{})
   }, [isLoading, data]);
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+
+  console.log("state", state);
 
   const value = {
     state,
