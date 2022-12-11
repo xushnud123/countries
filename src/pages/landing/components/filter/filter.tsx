@@ -9,6 +9,7 @@ interface FilterProps {}
 
 const Filter: FC<FilterProps> = () => {
   const { regionName = "" } = useParams();
+  console.log('filter',regionName);
   const { data, isLoading } = useRegion(regionName);
   return (
     <div className={cls.wrapper}>

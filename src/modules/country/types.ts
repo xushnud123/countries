@@ -20,7 +20,7 @@ export namespace CountryData {
       svg: string;
     };
     continents: string[];
-    currencies: any;
+    currencies: {};
     demonyms: {
       eng: {
         f: string;

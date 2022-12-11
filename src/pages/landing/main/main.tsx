@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 import useCountries from "modules/countries/hooks/useCountries";
 import Main from "layout/main";

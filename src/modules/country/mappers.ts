@@ -16,7 +16,7 @@ export const Country = (item: any): Types.CountryData.County => {
     cioc: get(item, "cioc"),
     coatOfArms: get(item, "coatOfArms"),
     continents: get(item, "continents"),
-    currencies: get(item, "currencies"),
+    currencies: get(item, "currencies") || {},
     demonyms: get(item, "demonyms"),
     fifa: get(item, "fifa"),
     flag: get(item, "flag"),

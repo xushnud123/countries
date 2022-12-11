@@ -25,6 +25,8 @@ const Main: FC<MainProps> = ({ cardLeft, cardRight }) => {
           </div>
         </div>
         <div className={cls.cardRight}>{cardRight}</div>
+        <div className={cls.glow1} />
+        <div className={cls.glow2} />
       </div>
     </div>
   );
