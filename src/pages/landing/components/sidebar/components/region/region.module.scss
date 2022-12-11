@@ -4,27 +4,31 @@
   padding-top: 40px;
   .container {
     padding: 15px 0;
+    padding-right: 5px;
     width: 100%;
+    width: 410px;
     overflow: scroll;
     scroll-behavior: smooth;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     &::-webkit-scrollbar {
       display: none;
     }
     .btns {
-      padding: 0 5px;
+      margin: 0 5px;
       width: 100%;
       display: block;
       display: flex;
       gap: 15px;
       box-sizing: border-box;
       .btn {
+        box-sizing: border-box;
         height: 44px;
         cursor: pointer;
         position: relative;
         border: 0;
         background: transparent;
         p {
+          box-sizing: border-box;
           position: relative;
           z-index: 2;
           top: 0;
@@ -45,7 +49,6 @@
           white-space: nowrap;
         }
         transition: all linear 0.225s;
-
         &::before {
           content: "";
           background: transparent;
