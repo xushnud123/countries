@@ -1,8 +1,7 @@
-import Main from "layout/main";
-import useCountries from "modules/countries/hooks/useCountries";
-import { useRegion } from "modules/region/hooks/useRegion";
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import useCountries from "modules/countries/hooks/useCountries";
+import Main from "layout/main";
 import { Countries, Sidebar, Country } from "../components";
 import Filter from "../components/filter/filter";
 
