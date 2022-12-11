@@ -19,6 +19,9 @@ const Card: FC<CardProps> = ({ official, svg, name }) => {
         <div className={cls["card-body"]}>
           <h5 className={cls.title}>{name[1] || name[0]}</h5>
         </div>
+        <div className={cls.glass}>
+         
+        </div>
       </div>
     </Link>
   );
