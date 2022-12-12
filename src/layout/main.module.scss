@@ -81,9 +81,8 @@
       height: 450px;
       filter: blur(55px);
       border-radius: 29% 71% 56% 44% / 30% 31% 69% 70%;
-      animation-name: anim;
+      animation: anim 100s both;
       animation-iteration-count: infinite;
-      animation-duration: 100s;
     }
     .glow2 {
       position: absolute;
@@ -94,9 +93,8 @@
       height: 450px;
       filter: blur(50px);
       border-radius: 29% 71% 56% 44% / 30% 31% 69% 70%;
-      animation-name: anim2;
+      animation: anim2 100s both;
       animation-iteration-count: infinite;
-      animation-duration: 100s;
     }
   }
 }
