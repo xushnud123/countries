@@ -32,6 +32,7 @@ export const Country = (item: any): Types.CountryData.County => {
     population: get(item, "population"),
     startOfWeek: get(item, "startOfWeek"),
     status: get(item, "status"),
+    region: get(item, "region"),
     subregion: get(item, "subregion"),
     tld: get(item, "tld"),
     translations: get(item, "translations"),

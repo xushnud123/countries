@@ -5,11 +5,9 @@
   .container {
     padding: 15px 0;
     padding-right: 5px;
-    width: 100%;
-    width: 410px;
+    width: 400px;
     overflow: scroll;
     scroll-behavior: smooth;
-    // box-sizing: border-box;
     &::-webkit-scrollbar {
       display: none;
     }
