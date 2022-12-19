@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Country } from "./mappers";
+import { Country } from "../mappers";
 import { useQuery, useQueryClient } from "react-query";
-import type * as Types from "./types";
+import type * as Types from "../types";
 
 interface CountryData {
   nameID: string;
@@ -28,7 +28,7 @@ export const useCountry = ({ nameID: name }: CountryData) => {
   >(["country", name], () => fetchCountry(name), {
     // @ts-ignore
     initialData: () => {
-      if (hero.length > 0) {
+      if (hero.length > 1) {
         // @ts-ignore
         const heroData = hero[0][1].find(
           (item: any) => item?.name?.official === name
@@ -37,10 +37,11 @@ export const useCountry = ({ nameID: name }: CountryData) => {
         if (heroData) {
           return heroData;
         } else return undefined;
-      } else if (hero.length === 0) {
+      } else if (hero.length < 1) {
         return () => fetchCountry(name);
       }
     },
+    cacheTime: 3000,
   });
 
   if (isError) {

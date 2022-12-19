@@ -1,18 +1,31 @@
-import Main from "layout/main";
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import Countries from "../countries/countries";
-import Country from "../country/country";
+import useCountries from "modules/countries/hooks/useCountries";
+import Main from "layout/main";
+import { Countries, Sidebar, Country } from "../components";
+import Filter from "../components/filter/filter";
 
 interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
+  const { data, isLoading } = useCountries();
+
   return (
     <Main
-      cardLeft={<h1>Hello World</h1>}
+      cardLeft={<Sidebar />}
       cardRight={
         <Routes>
-          <Route path='/' element={<Countries />} />
+          <Route
+            path='/'
+            element={
+              <Countries
+                //@ts-ignore
+                data={data}
+                isLoading={isLoading}
+              />
+            }
+          />
+          <Route path='/filter/:regionName' element={<Filter />} />
           <Route path='/:name' element={<Country />} />
         </Routes>
       }

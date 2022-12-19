@@ -20,7 +20,7 @@ export namespace CountryData {
       svg: string;
     };
     continents: string[];
-    currencies: any;
+    currencies: {};
     demonyms: {
       eng: {
         f: string;
@@ -32,7 +32,7 @@ export namespace CountryData {
       };
     };
     fifa: string;
-    flag: symbol | string;
+    flag: string;
     flags: {
       png: string;
       svg: string;
@@ -58,6 +58,7 @@ export namespace CountryData {
     population: number;
     startOfWeek: string;
     status: string;
+    region: string;
     subregion: string;
     tld: string[];
     translations: any;

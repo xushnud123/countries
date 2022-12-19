@@ -1,0 +1,100 @@
+.cards {
+  width: 100%;
+  text-decoration: none;
+  // transition: all linear 0.2s;
+  box-shadow: 0 5px 15px transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.2s linear;
+  border-radius: 10px;
+  box-shadow: transparent 0px -50px 36px -28px inset;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  .card {
+    border-radius: 10px;
+    height: 250px;
+    position: relative;
+    background: rgba(6, 12, 33, 0.1);
+    // overflow: hidden;
+    .card-header {
+      overflow: hidden;
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: 180px;
+      position: relative;
+      z-index: 3;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      box-sizing: border-box;
+      will-change: transform;
+      background: rgba(255, 255, 255, 0.25);
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    .card-body {
+      height: 70px;
+      padding: 20px 10px 10px;
+      .title {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 900;
+        color: #fff;
+      }
+      border-radius: 0 0 10px 10px;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+    transition: all linear 0.225s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      z-index: -1;
+      transition: all both 0.225s;
+      border-radius: 10px;
+      overflow: hidden;
+      filter: blur(30px);
+      background: linear-gradient(
+        235deg,
+        transparent,
+        transparent,
+        transparent
+      );
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      background: linear-gradient(
+        235deg,
+        transparent,
+        transparent,
+        transparent
+      );
+      z-index: -2;
+      filter: blur(30px);
+      transition: all both 0.225s;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    &:hover {
+      .glass {
+        bottom: -15px;
+      }
+      &::before,
+      &::after {
+        background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+      }
+    }
+  }
+}
