@@ -1913,6 +1913,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/compression-webpack-plugin@^9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@types/compression-webpack-plugin/-/compression-webpack-plugin-9.1.1.tgz#c73bf509c13e51fe05e0b84722ed88503cfa3bcc"
+  integrity sha512-cCZFFPFgZ42nWv+uHNgUenQl4gjo+oIvdPwLkGnsJBD6IpaN8dKxanLksHtc5fvlo74a5/sOuX6H320r/GROUw==
+  dependencies:
+    compression-webpack-plugin "*"
+
 "@types/connect-history-api-fallback@^1.3.5":
   version "1.3.5"
   resolved "https://registry.npmjs.org/@types/connect-history-api-fallback/-/connect-history-api-fallback-1.3.5.tgz"
@@ -3418,6 +3425,14 @@ compressible@~2.0.16:
   integrity sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==
   dependencies:
     mime-db ">= 1.43.0 < 2"
+
+compression-webpack-plugin@*:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-10.0.0.tgz#3496af1b0dc792e13efc474498838dbff915c823"
+  integrity sha512-wLXLIBwpul/ALcm7Aj+69X0pYT3BYt6DdPn3qrgBIh9YejV9Bju9ShhlAsjujLyWMo6SAweFIWaUoFmXZNuNrg==
+  dependencies:
+    schema-utils "^4.0.0"
+    serialize-javascript "^6.0.0"
 
 compression@^1.7.4:
   version "1.7.4"
