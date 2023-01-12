@@ -30,7 +30,8 @@
         top: 0;
         height: 100%;
         width: 400px;
-        transition: all linear 0.225s;
+        transition: linear 0.225s;
+        transition-property: left;
         &.active {
           left: 0;
         }
@@ -47,7 +48,8 @@
           top: 0;
           right: 0;
           transform: translateX(100%);
-          transition: all linear 0.225s;
+          transition: linear 0.225s;
+          transition-property: transform;
           @media screen and (min-width: 1200px) {
             display: none;
           }
@@ -64,7 +66,6 @@
       height: 100vh;
       overflow-y: scroll;
       padding-left: 25px;
-      // background: #fff;
       box-sizing: border-box;
       &::-webkit-scrollbar {
         display: none;
@@ -104,7 +105,7 @@
 @keyframes anim2 {
   0% {
     bottom: 0%;
-    tight: -225px;
+    right: -225px;
     border-radius: 29% 71% 56% 44% / 30% 31% 69% 70%;
   }
   25% {

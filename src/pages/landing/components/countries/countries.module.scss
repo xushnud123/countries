@@ -1,10 +1,7 @@
 .wrapper {
   width: 100%;
   padding: 20px 30px;
-  background: rgba(245, 246, 255, 0.1);
   min-height: 100vh;
-  border-radius: 25px;
-  background-size: cover;
   background-attachment: fixed;
   background: rgba(78, 74, 74, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -12,17 +9,21 @@
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  @media screen and (max-width: 750px) {
+    padding: 20px 15px;
+  }
   .allCard {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    // -webkit-column-count: 4;
-    // -moz-column-count: 4;
-    // column-count: 4;
-    // -webkit-column-width: 25%;
-    // -moz-column-width: 25%;
-    // column-width: 25%;
     box-sizing: border-box;
+    @media screen and (max-width: 750px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    @media screen and (max-width: 450px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

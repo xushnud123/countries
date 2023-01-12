@@ -9,7 +9,7 @@ interface MainProps {
 }
 
 const Main: FC<MainProps> = ({ cardLeft, cardRight }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={cls.wrapper}>
@@ -25,8 +25,6 @@ const Main: FC<MainProps> = ({ cardLeft, cardRight }) => {
           </div>
         </div>
         <div className={cls.cardRight}>{cardRight}</div>
-        {/* <div className={cls.glow1} />
-        <div className={cls.glow2} /> */}
       </div>
     </div>
   );
