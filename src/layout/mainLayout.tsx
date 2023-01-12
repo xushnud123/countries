@@ -1,6 +1,8 @@
 import { ReactNode, FC, useState } from "react";
 import cx from "classnames";
 
+import arrow from "assets/images/icons/arrow.svg";
+
 import cls from "./main-layout.module.scss";
 
 interface MainLayoutProps {
@@ -20,7 +22,7 @@ const MainLayout: FC<MainLayoutProps> = ({ cardLeft, cardRight }) => {
             <div
               className={cx(cls.open, open && cls.activeOpen)}
               onClick={() => setOpen(!open)}>
-              Open
+              <img className={cls.arrow} src={arrow} alt='img not founds' />
             </div>
           </div>
         </div>

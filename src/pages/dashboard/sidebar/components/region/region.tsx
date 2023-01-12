@@ -11,6 +11,7 @@ interface RegionProps {
 
 const Region: FC<RegionProps> = ({ data, name }) => {
   const [nav, setNav] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (nav.length !== 0) {
@@ -19,10 +20,9 @@ const Region: FC<RegionProps> = ({ data, name }) => {
     }
   }, [nav]);
 
-
-  const navigate = useNavigate();
   return (
     <div className={cls.wrapper}>
+      <h1 className={cls.title}>{name}</h1>
       <div className={cls.container}>
         <div className={cls.btns}>
           {data.map((reg) => (

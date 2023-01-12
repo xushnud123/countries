@@ -30,8 +30,7 @@
         top: 0;
         height: 100%;
         width: 400px;
-        transition: linear 0.225s;
-        transition-property: left;
+        transition: all linear 0.225s;
         &.active {
           left: 0;
         }
@@ -41,20 +40,30 @@
         height: 100%;
         position: relative;
         .open {
-          padding: 15px 25px;
-          background: rebeccapurple;
+          cursor: pointer;
+          border-radius: 0 50% 50% 0;
+          background: rgb(50, 61, 130);
           color: #fff;
           position: absolute;
-          top: 0;
+          top: 40px;
           right: 0;
-          transform: translateX(100%);
+          transform: translateX(calc(100% - 1px));
           transition: linear 0.225s;
           transition-property: transform;
           @media screen and (min-width: 1200px) {
             display: none;
           }
+          .arrow {
+            width: 45px;
+            height: 45px;
+            transition: linear 0.225s;
+            transition-property: transform;
+            transform: rotate(0);
+          }
           &.activeOpen {
-            transform: translateX(0);
+            .arrow {
+              transform: rotate(180deg);
+            }
           }
         }
       }

@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import "react-loading-skeleton/dist/skeleton.css";
 import "assets/styles/main.scss";
+import "react-tooltip/dist/react-tooltip.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
