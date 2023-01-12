@@ -1,7 +1,7 @@
 import "./App.css";
-import { Main } from "pages";
 import React, { useEffect, useState } from "react";
 import { Loader } from "components";
+import RoutesComponent from "routes";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -15,7 +15,7 @@ function App() {
         <Loader />
       ) : ( */}
       <React.Fragment>
-        <Main />
+        <RoutesComponent />
       </React.Fragment>
     </div>
   );

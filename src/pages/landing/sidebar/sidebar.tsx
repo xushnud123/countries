@@ -1,20 +1,16 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
 import { Region } from "./components";
+import { REGION, SUBREGION } from "constant/countries";
 
 import cls from "./sidebar.module.scss";
 
 interface SideBarProps {}
 
 const SideBar: FC<SideBarProps> = () => {
-  const navigate = useNavigate();
-  function handler(nav: string) {
-    navigate(`filter/${nav}`);
-  }
-
   return (
     <div className={cls.wrapper}>
-      <Region />
+      <Region name='region' data={REGION} />
+      <Region name='subregion' data={SUBREGION} />
     </div>
   );
 };

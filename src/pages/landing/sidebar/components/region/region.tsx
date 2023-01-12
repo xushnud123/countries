@@ -1,13 +1,15 @@
 import { FC, useEffect, useState } from "react";
 import cx from "classnames";
 import { useNavigate } from "react-router-dom";
-import { region } from "constant/countries";
 
 import cls from "./region.module.scss";
 
-interface RegionProps {}
+interface RegionProps {
+  data: string[];
+  name: string;
+}
 
-const Region: FC<RegionProps> = () => {
+const Region: FC<RegionProps> = ({ data, name }) => {
   const [nav, setNav] = useState("");
 
   useEffect(() => {
@@ -17,16 +19,17 @@ const Region: FC<RegionProps> = () => {
     }
   }, [nav]);
 
+
   const navigate = useNavigate();
   return (
     <div className={cls.wrapper}>
       <div className={cls.container}>
         <div className={cls.btns}>
-          {region.map((reg) => (
+          {data.map((reg) => (
             <button
               type='button'
               key={reg}
-              onClick={() => setNav(reg)}
+              onClick={() => setNav(`${name}$${reg}`)}
               className={cx(cls.btn, reg === nav && cls.active)}>
               <p>{reg}</p>
             </button>

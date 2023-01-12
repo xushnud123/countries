@@ -1,14 +1,14 @@
 import { ReactNode, FC, useState } from "react";
 import cx from "classnames";
 
-import cls from "./main.module.scss";
+import cls from "./main-layout.module.scss";
 
-interface MainProps {
+interface MainLayoutProps {
   cardLeft: ReactNode;
   cardRight: ReactNode;
 }
 
-const Main: FC<MainProps> = ({ cardLeft, cardRight }) => {
+const MainLayout: FC<MainLayoutProps> = ({ cardLeft, cardRight }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,4 +30,4 @@ const Main: FC<MainProps> = ({ cardLeft, cardRight }) => {
   );
 };
 
-export default Main;
+export default MainLayout;
