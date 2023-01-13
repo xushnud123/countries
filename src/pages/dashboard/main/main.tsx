@@ -2,8 +2,6 @@ import { FC } from "react";
 
 interface MainProps {}
 
-const Main: FC<MainProps> = () => {
-  return <div>Hello Main</div>;
-};
+const Main: FC<MainProps> = () => <div>Hello Main</div>;
 
 export default Main;

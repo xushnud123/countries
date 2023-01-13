@@ -1,8 +1,14 @@
-import React, { createContext, Dispatch, ReactNode, useReducer } from "react";
+import React, {
+  createContext,
+  Dispatch,
+  ReactNode,
+  useEffect,
+  useReducer,
+} from "react";
+
 import useCountries from "modules/countries/hooks/useCountries";
-import { useEffect } from "react";
-import { useState } from "react";
-import reducer, { State, Action } from "./reducer";
+
+import reducer, { Action, State } from "./reducer";
 
 export interface IContext {
   state: State;
@@ -23,15 +29,14 @@ interface Props {
 
 const ContextProvider: React.FC<Props> = ({ children }) => {
   const { data, isLoading } = useCountries();
-    const [state, dispatch] = useReducer(reducer, {
-      initialState: data,
-      isLoading: isLoading,
-    });
+  const [state, dispatch] = useReducer(reducer, {
+    initialState: data,
+    isLoading,
+  });
 
   useEffect(() => {
     // disptch(()=>{})
   }, [isLoading, data]);
-
 
   console.log("state", state);
 

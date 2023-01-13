@@ -14,6 +14,7 @@ const useCountries = () => {
 
     return countries;
   };
+
   return useQuery<any, any, Types.CountriesData.Countries[]>(
     ["countries", "list"],
     fetchCountries,

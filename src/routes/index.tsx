@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import useCountries from "modules/countries/hooks/useCountries";
 import MainLayout from "layout/mainLayout";
+
+import useCountries from "modules/countries/hooks/useCountries";
+
 import { Sidebar } from "pages";
 
 interface RoutesComponentProps {}

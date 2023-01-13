@@ -1,8 +1,11 @@
 import { FC } from "react";
-import { CardSkeleton } from "components";
-import Card from "./card/card";
 import { temporaryData } from "constant/countries";
+
 import type * as Types from "modules/countries/types";
+
+import { CardSkeleton } from "components";
+
+import Card from "./card/card";
 
 import cls from "./countries.module.scss";
 
@@ -12,7 +15,7 @@ interface CountriesProps {
 }
 
 const Countries: FC<CountriesProps> = ({ data, isLoading }) => {
-  
+
   if (isLoading) {
     return (
       <div className={cls.wrapper}>
@@ -33,7 +36,7 @@ const Countries: FC<CountriesProps> = ({ data, isLoading }) => {
             official={item.name.official}
             svg={item.flags.svg}
             name={item.altSpellings}
-            key={index}
+            key={item.name.official}
           />
         ))}
       </div>

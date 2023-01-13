@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
-import cx from "classnames";
 import { useNavigate } from "react-router-dom";
+import cx from "classnames";
 
 import cls from "./region.module.scss";
 
@@ -16,6 +16,7 @@ const Region: FC<RegionProps> = ({ data, name }) => {
   useEffect(() => {
     if (nav.length !== 0) {
       const handler = () => navigate(nav[0] === "/" ? "/" : `filter/${nav}`);
+
       handler();
     }
   }, [nav]);
@@ -37,7 +38,7 @@ const Region: FC<RegionProps> = ({ data, name }) => {
           <button
             type='button'
             onClick={() => setNav("/")}
-            className={cx(cls.btn, ("/" === nav || "" === nav) && cls.active)}>
+            className={cx(cls.btn, (nav === "/" || nav === "") && cls.active)}>
             <p>All Countries</p>
           </button>
         </div>
@@ -45,4 +46,5 @@ const Region: FC<RegionProps> = ({ data, name }) => {
     </div>
   );
 };
+
 export default Region;

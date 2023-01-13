@@ -1,4 +1,4 @@
-import { ReactNode, FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import cx from "classnames";
 
 import arrow from "assets/images/icons/arrow.svg";

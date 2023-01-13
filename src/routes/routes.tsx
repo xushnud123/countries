@@ -1,8 +1,10 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
+
 import useCountries from "modules/countries/hooks/useCountries";
-import { Countries, Country, Empty, Filter } from "pages/dashboard/components";
+
 import { Dashboard, Landing } from "pages";
+import { Countries, Country, Empty, Filter } from "pages/dashboard/components";
 
 interface RoutesComponentProps {}
 
@@ -16,7 +18,7 @@ const RoutesConfig: FC<RoutesComponentProps> = () => {
         path='all'
         element={
           <Countries
-            //@ts-ignore
+            // @ts-ignore
             data={data}
             isLoading={isLoading}
           />
@@ -27,8 +29,8 @@ const RoutesConfig: FC<RoutesComponentProps> = () => {
         <Route path='empty' element={<Empty />} />
         <Route path='filter' element={<Filter />}>
           <Route path=':regionName' element={<Country />} />
+          <Route path=':name' element={<Country />} />
         </Route>
-        <Route path=':name' element={<Country />} />
       </Route>
     </Routes>
   );

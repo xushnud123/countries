@@ -16,18 +16,18 @@ const Search: FC<SearchProps> = ({ name, keyName, information }) => {
   const [capital, setCapital] = useState("");
   const navigate = useNavigate();
 
+  // eslint-disable-next-line consistent-return
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (capital) {
       return navigate(`filter/${name}$${capital}`);
     }
-    return;
   };
 
   return (
     <div className={cls.wrapper}>
       <div className={cls.row}>
-        <h1 className={cls.title}>Search by {keyName ? keyName : name}</h1>
+        <h1 className={cls.title}>Search by {keyName || name}</h1>
         {information && (
           <>
             <img id={name} src={info} alt='info img' />
@@ -40,8 +40,9 @@ const Search: FC<SearchProps> = ({ name, keyName, information }) => {
         )}
       </div>
       <form className={cls["custom-form"]} onSubmit={handleSubmit}>
-        <label className={cls["custom-label"]}>
+        <label htmlFor={name} className={cls["custom-label"]}>
           <input
+            id={name}
             className={cls["custom-input"]}
             type='text'
             placeholder={
@@ -56,11 +57,12 @@ const Search: FC<SearchProps> = ({ name, keyName, information }) => {
             onChange={(e) => setCapital(e.target.value)}
           />
         </label>
-        <button disabled={!capital} type='submit' className={cls["btn"]}>
+        <button disabled={!capital} type='submit' className={cls.btn}>
           Search
         </button>
       </form>
     </div>
   );
 };
+
 export default Search;

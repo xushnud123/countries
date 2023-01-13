@@ -1,16 +1,17 @@
 import { FC } from "react";
 import { useParams } from "react-router-dom";
-import { useCountry } from "modules/country/hooks/useCountry";
-import { MapContainer, Marker,Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-import cls from "./country.module.scss";
+import { useCountry } from "modules/country/hooks/useCountry";
 
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
-let DefaultIcon = L.icon({
+import "leaflet/dist/leaflet.css";
+import cls from "./country.module.scss";
+
+const DefaultIcon = L.icon({
   iconUrl: icon,
   shadowUrl: iconShadow,
 });
@@ -23,7 +24,7 @@ const Country: FC<CountryProps> = () => {
   const { name = "Republic of Uzbekistan" } = useParams();
 
   const { data, isLoading } = useCountry({ nameID: name });
-
+  
   if (isLoading) {
     return <h1>Loading...</h1>;
   }

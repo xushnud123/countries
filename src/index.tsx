@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { ReactQueryDevtools } from "react-query/devtools";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+import App from "./App";
+
 import "react-loading-skeleton/dist/skeleton.css";
 import "assets/styles/main.scss";
 import "react-tooltip/dist/react-tooltip.css";
@@ -18,6 +20,7 @@ const client = new QueryClient({
     },
   },
 });
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>

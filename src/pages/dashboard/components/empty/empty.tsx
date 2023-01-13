@@ -6,8 +6,7 @@ import cls from "./empty.module.scss";
 
 interface EmptyProps {}
 
-const Empty: FC<EmptyProps> = () => {
-  return (
+const Empty: FC<EmptyProps> = () => (
     <div className={cls.empty}>
       <img src={search} className={cls.search} alt='img not found' />
       <h1 className={cls.title}>No search results found</h1>
@@ -17,5 +16,5 @@ const Empty: FC<EmptyProps> = () => {
       </p>
     </div>
   );
-};
+
 export default Empty;

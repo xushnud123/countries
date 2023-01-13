@@ -9,9 +9,8 @@ interface CardProps {
   name: string[];
 }
 
-const Card: FC<CardProps> = ({ official, svg, name }) => {
-  return (
-    <Link to={`/${official}`} className={cls.cards}>
+const Card: FC<CardProps> = ({ official, svg, name }) => (
+    <Link to={`name$${official}`} className={cls.cards}>
       <div className={cls.card}>
         <div className={cls["card-header"]}>
           <img className={cls.img} src={svg} alt='img not found' />
@@ -19,12 +18,11 @@ const Card: FC<CardProps> = ({ official, svg, name }) => {
         <div className={cls["card-body"]}>
           <h5 className={cls.title}>{name[1] || name[0]}</h5>
         </div>
-        <div className={cls.glass}>
-         
-        </div>
+        {/* <div className={cls.glass}>
+
+        </div> */}
       </div>
     </Link>
   );
-};
 
 export default Card;

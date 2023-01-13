@@ -1,6 +1,7 @@
 import axios from "axios";
-import { NameSeparation } from "helpers/helpers";
 import { useQuery } from "react-query";
+
+import { NameSeparation } from "helpers/helpers";
 
 export const useRegion = (regionName: string) => {
   const [filterRegion, region] = NameSeparation(regionName);
