@@ -16,20 +16,16 @@ const Navbar: FC<NavbarProps> = ({ inView }) => {
 
   return (
     <div className={cx(cls.wrapper, inView && cls.act)}>
-      <div className={cls.nav}>
+      <div className={cls.navbar}>
         <div className={cls.logo}>
           <img src={logo} alt='logo not found' />
         </div>
-        <div className={cls.logo}>
-          <div className={cls.ul}>
-            <div className={cls.li}>
-              <input
-                type='text'
-                value={state}
-                onChange={(e) => setState(e.target.value)}
-              />
-            </div>
-          </div>
+        <div className={cls.nav}>
+          <ul className={cls.ul}>
+            <li className={cls.li}>simple search</li>
+            <li className={cls.li}>search bar</li>
+            <li className={cls.li}>About</li>
+          </ul>
         </div>
         <Button variants='info' className='btn' type='button'>
           Button
