@@ -1,4 +1,5 @@
 @import "./fonts.scss";
+@import "./color.scss";
 
 * {
   font-family: "Comfortaa", cursive;
@@ -9,4 +10,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  @include theme-light;
 }

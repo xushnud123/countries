@@ -1,0 +1,11 @@
+@mixin theme-light {
+  // light mode
+  --color-light-info: #42dde6;
+  --color-light-danger: #ff008e;
+  --color-light-primary: #1e2a78;
+  --color-light-info-04: #42dde666;
+  --color-light-danger-04: #ff008e66;
+  --color-light-primary-04: rgba(30, 42, 120, 0.4);
+  --color-light-white: #ffffff;
+  --color-light-dark: rgb(21, 21, 21);;
+}

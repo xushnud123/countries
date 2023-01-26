@@ -1,0 +1,81 @@
+.wrapper {
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  transition: linear 0.225s;
+  transition-property: background-color, box-shadow;
+  box-shadow: 0 4px 14px 0 transparent;
+  color: var(--color-light-white);
+  &:active {
+    animation: press 0.2s 1 linear;
+  }
+  &.info {
+    background: var(--color-light-info-04);
+    border: 1px solid var(--color-light-info);
+    &:hover {
+      box-shadow: 0 4px 14px 0 var(--color-light-info-04);
+      background: var(--color-light-info);
+    }
+  }
+  &.danger {
+    background: var(--color-light-danger-04);
+    border: 1px solid var(--color-light-danger);
+    &:hover {
+      box-shadow: 0 4px 14px 0 var(--color-light-danger-04);
+      background: var(--color-light-danger);
+    }
+  }
+  &.danger {
+    background: var(--color-light-primary-04);
+    border: 1px solid var(--color-light-primary);
+    color: var(--color-light-white);
+    &:hover {
+      box-shadow: 0 4px 14px 0 var(--color-light-primary-04);
+      background: var(--color-light-primary);
+    }
+  }
+  .ripples {
+    position: absolute;
+    background: var(--color-light-white);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 1s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
+}
