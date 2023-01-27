@@ -4,6 +4,8 @@
   overflow: hidden;
   position: relative;
   background: var(--color-light-dark);
+  background-image: url("../../assets/images/b-color/stars\ 1.svg");
+  background-size: contain;
   // .grad1 {
   //   position: absolute;
   //   background: #9cffea;
@@ -48,5 +50,8 @@
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
+  }
+  &.active {
+    position: fixed;
   }
 }

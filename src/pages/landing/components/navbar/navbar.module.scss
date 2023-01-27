@@ -2,11 +2,11 @@
   width: 100%;
   transition: all linear 0.5s;
   padding: 0 30px;
-  @media screen and (max-width: 1170px) {
-  }
   @media screen and (max-width: 750px) {
     padding: 0 15px;
   }
+  border-bottom: 1px solid var(--color-light-info-04);
+  position: relative;
   .navbar {
     max-width: 1170px;
     margin: 0 auto;
@@ -14,15 +14,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
-    .logo {
-      img {
-        width: 45px;
-        height: auto;
+    padding: 15px 0;
+    .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .logo {
+        img {
+          width: 45px;
+          height: auto;
+        }
+      }
+      .btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        img {
+          width: 50px;
+          height: auto;
+          transition: linear 0.5s;
+          transition-property: transform;
+        }
+        &.active {
+          img {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
     .nav {
       height: 100%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .ul {
         display: flex;
         align-items: center;
@@ -46,6 +72,36 @@
             border: 1px solid var(--color-light-info);
             background: var(--color-light-info-04);
           }
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 850px) {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: calc(100vh - 87px);
+        top: 87px;
+        left: 0;
+        transition: linear 0.5s;
+        transition-property: transform;
+        transform: translateX(100%);
+        background: var(--color-light-dark);
+        background-image: url("../../../../assets/images/b-color/stars\ 1.svg");
+        background-size: contain;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+        .ul {
+          padding-top: 50px;
+          flex-direction: column;
+          .li {
+            padding: 12px 30px;
+          }
+        }
+        &.active-nav {
+          transform: translateX(0);
         }
       }
     }

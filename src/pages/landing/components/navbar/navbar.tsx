@@ -4,32 +4,40 @@ import cx from "classnames";
 import { Button } from "components";
 
 import logo from "assets/images/logo/logo_2.svg";
+import hamburger from "assets/images/navbar/Frame 7.svg";
 
 import cls from "./navbar.module.scss";
 
 interface NavbarProps {
   inView?: boolean;
+  state: boolean;
+  onState: (e: boolean) => void;
 }
 
-const Navbar: FC<NavbarProps> = ({ inView }) => {
-  const [state, setState] = useState("");
-
+const Navbar: FC<NavbarProps> = ({ inView, state, onState }) => {
   return (
     <div className={cx(cls.wrapper, inView && cls.act)}>
       <div className={cls.navbar}>
-        <div className={cls.logo}>
-          <img src={logo} alt='logo not found' />
+        <div className={cls.wrap}>
+          <div className={cls.logo}>
+            <img src={logo} alt='logo not found' />
+          </div>
+          <div
+            className={cx(cls.btn, state && cls.active)}
+            onClick={() => onState(!state)}>
+            <img src={hamburger} alt='img not found' />
+          </div>
         </div>
-        <div className={cls.nav}>
+        <div className={cx(cls.nav, state && cls["active-nav"])}>
           <ul className={cls.ul}>
             <li className={cls.li}>simple search</li>
             <li className={cls.li}>search bar</li>
             <li className={cls.li}>About</li>
           </ul>
+          <Button variants='info' className='btn' type='button'>
+            Button
+          </Button>
         </div>
-        <Button variants='info' className='btn' type='button'>
-          Button
-        </Button>
       </div>
     </div>
   );
