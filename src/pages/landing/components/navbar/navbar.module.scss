@@ -42,6 +42,12 @@
           }
         }
       }
+      @media screen and (min-width: 850px) {
+        width: auto;
+        .btn {
+          display: none;
+        }
+      }
     }
     .nav {
       height: 100%;

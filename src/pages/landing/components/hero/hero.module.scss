@@ -44,11 +44,43 @@ $mobile-center: 380px;
         transition: all linear 0.3s;
         .card-1 {
           overflow: hidden;
+          position: relative;
+          height: 250px;
+          border-radius: 40px;
           img {
             width: 100%;
-            height: 250px;
-            border-radius: 40px;
+            height: 100%;
             object-fit: cover;
+          }
+          .info {
+            border-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: var(--color-light-info-06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s linear;
+            // transition-property: transform, bottom;
+            border: 1px solid var(--color-light-info);
+            // box-sizing: border-box;
+            h1 {
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 500;
+              text-align: center;
+              color: var(--color-light-white);
+            }
+          }
+          &:hover {
+            .info {
+              bottom: 0;
+            }
           }
         }
       }
@@ -58,22 +90,85 @@ $mobile-center: 380px;
         .card-1 {
           overflow: hidden;
           height: 270px;
+          position: relative;
+          border-radius: 40px;
           img {
             width: 100%;
-            height: 270px;
-            border-radius: 40px;
+            height: 100%;
             object-fit: cover;
+          }
+          .info {
+            border-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: var(--color-light-info-06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s linear;
+            // transition-property: transform, bottom;
+            border: 1px solid var(--color-light-info);
+            // box-sizing: border-box;
+            h1 {
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 500;
+              text-align: center;
+              color: var(--color-light-white);
+            }
+          }
+          &:hover {
+            .info {
+              bottom: 0;
+            }
           }
         }
         .card-2 {
           margin-top: 30px;
           overflow: hidden;
-          height: max-content;
+          height: 180px;
+          position: relative;
+          border-radius: 40px;
+
           img {
             width: 100%;
             height: 180px;
-            border-radius: 40px;
             object-fit: cover;
+          }
+          .info {
+            border-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: var(--color-light-info-06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s linear;
+            // transition-property: transform, bottom;
+            border: 1px solid var(--color-light-info);
+            // box-sizing: border-box;
+            h1 {
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 500;
+              text-align: center;
+              color: var(--color-light-white);
+            }
+          }
+          &:hover {
+            .info {
+              bottom: 0;
+            }
           }
         }
       }
@@ -83,10 +178,10 @@ $mobile-center: 380px;
         .card-1 {
           height: 100%;
           overflow: hidden;
+          border-radius: 40px;
           img {
             width: 100%;
             height: 480px;
-            border-radius: 40px;
             object-fit: cover;
           }
         }
@@ -97,24 +192,89 @@ $mobile-center: 380px;
         .card-1 {
           margin-top: 30px;
           overflow: hidden;
-          height: max-content;
+          height: 270px;
+          position: relative;
+          border-radius: 40px;
           img {
             width: 100%;
-            height: 270px;
-            border-radius: 40px;
+            height: 100%;
             object-fit: cover;
+          }
+          .info {
+            border-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: var(--color-light-info-06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s linear;
+            // transition-property: transform, bottom;
+            border: 1px solid var(--color-light-info);
+            // box-sizing: border-box;
+            h1 {
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 500;
+              text-align: center;
+              color: var(--color-light-white);
+            }
+          }
+          &:hover {
+            .info {
+              bottom: 0;
+            }
           }
         }
         .card-2 {
           overflow: hidden;
-          height: max-content;
+          height: 180px;
+          position: relative;
+          border-radius: 40px;
           img {
             width: 100%;
-            height: 180px;
-            border-radius: 40px;
+            height: 100%;
             object-fit: cover;
           }
+          .info {
+            border-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: var(--color-light-info-06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s linear;
+            // transition-property: transform, bottom;
+            border: 1px solid var(--color-light-info);
+            // box-sizing: border-box;
+            h1 {
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 500;
+              text-align: center;
+              color: var(--color-light-white);
+            }
+          }
+          &:hover {
+            .info {
+              bottom: 0;
+            }
+          }
         }
+      }
+      .option {
+        border: 0.9px solid var(--color-light-info-06);
       }
     }
     @media screen and (max-width: 650px) {
@@ -131,9 +291,16 @@ $mobile-center: 380px;
         .left-cart-1 {
           height: $mobile-h;
           .card-1 {
+            height: 100%;
+            width: 70%;
+            margin: 0 auto;
+            border-radius: 24px;
             img {
               height: $mobile-h;
+            }
+            .info {
               border-radius: 24px;
+              box-sizing: border-box;
             }
           }
         }
@@ -145,17 +312,25 @@ $mobile-center: 380px;
           gap: 20px;
           .card-1 {
             height: 100%;
+            border-radius: 24px;
             img {
               height: $mobile-h;
+            }
+            .info {
               border-radius: 24px;
+              box-sizing: border-box;
             }
           }
           .card-2 {
             height: 100%;
             margin-top: 0;
+            border-radius: 24px;
             img {
               height: $mobile-h;
+            }
+            .info {
               border-radius: 24px;
+              box-sizing: border-box;
             }
           }
         }
@@ -163,9 +338,9 @@ $mobile-center: 380px;
           height: $mobile-center;
           .card-1 {
             height: 100%;
+            border-radius: 24px;
             img {
               height: $mobile-center;
-              border-radius: 24px;
             }
           }
         }
@@ -178,16 +353,24 @@ $mobile-center: 380px;
           .card-1 {
             height: 100%;
             margin-top: 0;
+            border-radius: 24px;
             img {
               height: $mobile-h;
+            }
+            .info {
               border-radius: 24px;
+              box-sizing: border-box;
             }
           }
           .card-2 {
             height: 100%;
+            border-radius: 24px;
             img {
               height: $mobile-h;
+            }
+            .info {
               border-radius: 24px;
+              box-sizing: border-box;
             }
           }
         }
