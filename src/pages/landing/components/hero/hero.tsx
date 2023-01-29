@@ -6,7 +6,7 @@ import currency from "assets/images/hero/currency.webp";
 import language from "assets/images/hero/language.webp";
 import region from "assets/images/hero/region.webp";
 import capital from "assets/images/hero/capital.webp";
-import countries from 'assets/images/hero/countries.webp'
+import countries from "assets/images/hero/countries.webp";
 
 import cls from "./hero.module.scss";
 
@@ -15,9 +15,7 @@ interface HeroProps {}
 const Hero: FC<HeroProps> = () => {
   const ref = useRef(null);
   const card1 = useRef(null);
-  const card2 = useRef(null);
-  const card3 = useRef(null);
-  const card4 = useRef(null);
+
   const card5 = useRef(null);
 
   useEffect(() => {
@@ -62,7 +60,7 @@ const Hero: FC<HeroProps> = () => {
               </div>
             </div>
           </div>
-          <div ref={card2} className={cls["left-cart-2"]}>
+          <div className={cls["left-cart-2"]}>
             <div className={cx(cls["card-1"], cls.option)}>
               <img src={region} alt='img not found' />
               <div className={cls.info}>
@@ -76,15 +74,12 @@ const Hero: FC<HeroProps> = () => {
               </div>
             </div>
           </div>
-          <div ref={card3} className={cls["center"]}>
+          <div className={cls["center"]}>
             <div className={cx(cls["card-1"], cls.option)}>
-              <img
-                src={countries}
-                alt='img not found'
-              />
+              <img src={countries} alt='img not found' />
             </div>
           </div>
-          <div ref={card4} className={cls["right-cart-2"]}>
+          <div className={cls["right-cart-2"]}>
             <div className={cx(cls["card-2"], cls.option)}>
               <img src={capital} alt='img not found' />
               <div className={cls.info}>
