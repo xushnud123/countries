@@ -24,9 +24,9 @@ const Landing: FC<LandingProps> = () => {
       <div className={cls.container}>
         <Hero />
         <div ref={ref}>
-          <Cards />
         </div>
       </div>
+          <Cards />
     </div>
   );
 };
