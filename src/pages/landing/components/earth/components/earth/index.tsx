@@ -10,7 +10,7 @@ import EarthNightMap from "assets/textures/8k_earth_nightmap.jpeg";
 import EarthNormal from "assets/textures/8k_earth_normal_map.jpeg";
 import EarthSpecular from "assets/textures/8k_earth_specular_map.jpeg";
 
-export function Earth(params: any) {
+export function EarthMesh(params: any) {
   const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(
     TextureLoader,
     [EarthDayMap, EarthNormal, EarthSpecular, EarthClouds]

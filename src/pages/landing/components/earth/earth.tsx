@@ -1,19 +1,19 @@
 import { FC, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import cls from "./cards.module.scss";
-import { Earth } from "./components/earth";
+import cls from "./earth.module.scss";
+import { EarthMesh } from "./components/earth";
 
-interface CardsProps {}
+interface EarthProps {}
 
-const Cards: FC<CardsProps> = () => (
+const Earth: FC<EarthProps> = () => (
   <div className={cls.wrapper}>
     <Canvas>
       <Suspense fallback={null}>
-        <Earth />
+        <EarthMesh />
       </Suspense>
     </Canvas>
   </div>
 );
 
-export default Cards;
+export default Earth;

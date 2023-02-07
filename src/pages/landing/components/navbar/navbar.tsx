@@ -9,14 +9,13 @@ import hamburger from "assets/images/navbar/Frame 7.svg";
 import cls from "./navbar.module.scss";
 
 interface NavbarProps {
-  inView?: boolean;
   state: boolean;
   onState: (e: boolean) => void;
 }
 
-const Navbar: FC<NavbarProps> = ({ inView, state, onState }) => {
+const Navbar: FC<NavbarProps> = ({ state, onState }) => {
   return (
-    <div className={cx(cls.wrapper, inView && cls.act)}>
+    <div className={cx(cls.wrapper)}>
       <div className={cls.navbar}>
         <div className={cls.wrap}>
           <div className={cls.logo}>

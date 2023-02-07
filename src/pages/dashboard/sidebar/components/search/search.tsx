@@ -16,7 +16,6 @@ const Search: FC<SearchProps> = ({ name, keyName, information }) => {
   const [capital, setCapital] = useState("");
   const navigate = useNavigate();
 
-  // eslint-disable-next-line consistent-return
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (capital) {
@@ -30,7 +29,7 @@ const Search: FC<SearchProps> = ({ name, keyName, information }) => {
         <h1 className={cls.title}>Search by {keyName || name}</h1>
         {information && (
           <>
-            <img id={name} src={info} alt='info img' />
+            <img id={name} src={info} alt='info img not found' />
             <Tooltip
               className={cls.tooltip}
               anchorId={name}
