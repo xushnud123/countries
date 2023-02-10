@@ -3,49 +3,9 @@
   min-height: 150vh;
   overflow: hidden;
   position: relative;
-  background: var(--color-light-dark);
-  // background-image: url("../../assets/images/b-color/stars\ 1.svg");
+  // background: var(--color-light-dark);
   background-size: contain;
-  // .grad1 {
-  //   position: absolute;
-  //   background: #9cffea;
-  //   filter: blur(315.222px);
-  //   transform: rotate(49.72deg);
-  //   height: 1010.4668680995258px;
-  //   width: 848.5097131460659px;
-  //   left: 969.5078125px;
-  //   top: 308.39141845703125px;
-  //   border-radius: 0px;
-  // }
-  // .grad2 {
-  //   position: absolute;
-  //   background: linear-gradient(
-  //     138.27deg,
-  //     #18befd 24.69%,
-  //     rgba(45, 236, 249, 0.4) 65.77%
-  //   );
-  //   filter: blur(220.656px);
-  //   transform: rotate(-45.51deg);
-  //   height: 988.3999595205187px;
-  //   width: 972.4007530400056px;
-  //   left: 285.1171875px;
-  //   top: 693.6951293945312px;
-  //   border-radius: 0px;
-  // }
-  // .grad3 {
-  //   position: absolute;
-  //   background: linear-gradient(
-  //     138.27deg,
-  //     #18befd 24.69%,
-  //     rgba(45, 236, 249, 0.4) 65.77%
-  //   );
-  //   filter: blur(220.656px);
-  //   height: 1281.118408203125px;
-  //   width: 1281.118408203125px;
-  //   left: 0px;
-  //   top: 105.49249267578125px;
-  //   border-radius: 0px;
-  // }
+  z-index: 1;
   .container {
     width: 100%;
     max-width: 1170px;

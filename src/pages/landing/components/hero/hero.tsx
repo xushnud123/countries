@@ -6,9 +6,11 @@ import currency from "assets/images/hero/currency.webp";
 import language from "assets/images/hero/language.webp";
 import region from "assets/images/hero/region.webp";
 import capital from "assets/images/hero/capital.webp";
-import countries from 'assets/images/hero/countries.webp'
+import countries from "assets/images/hero/countries.webp";
 
 import cls from "./hero.module.scss";
+import { Text } from "components";
+import { HeroTitle } from "helpers/constants";
 
 interface HeroProps {}
 
@@ -22,7 +24,6 @@ const Hero: FC<HeroProps> = () => {
 
   useEffect(() => {
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     const refs = ref.current;
     const viewportHeight = (1170 - window.innerWidth) / 2;
 
@@ -46,12 +47,18 @@ const Hero: FC<HeroProps> = () => {
     refs2.style.transform = `scale(${value2 > 1 ? 1 : 0.5})`;
   };
 
+
   return (
     <div className={cls.wrapper}>
-      <h1 className={cls.title}>
-        Search for information about <span>Countries</span> with us{" "}
-        <span>fast</span>,<span>convenient</span>, <span>reliable</span>.
-      </h1>
+      <div className={cls.title}>
+        {HeroTitle.map((item) => (
+          <p key={item}>
+            {item.split("").map((i, idx) => (
+              <Text key={idx} text={i === " " ? "\u00A0" : i} />
+            ))}
+          </p>
+        ))}
+      </div>
       <div ref={ref} onScroll={onScroll} className={cls.container}>
         <div className={cls.row}>
           <div ref={card1} className={cls["left-cart-1"]}>
@@ -78,10 +85,7 @@ const Hero: FC<HeroProps> = () => {
           </div>
           <div ref={card3} className={cls["center"]}>
             <div className={cx(cls["card-1"], cls.option)}>
-              <img
-                src={countries}
-                alt='img not found'
-              />
+              <img src={countries} alt='img not found' />
             </div>
           </div>
           <div ref={card4} className={cls["right-cart-2"]}>
